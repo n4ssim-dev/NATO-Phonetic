@@ -6,5 +6,5 @@ file_dict = {row.letter:row.code for index,row in file_df.iterrows()}
 
 # Prend en compte l'user input et créer un dict comprenant comme key les lettres du mot et en value le mot associé en NATO Phonetic
 user_input = input("Choose a word:\n").upper()
-user_dict = {letter: file_dict[letter] for letter in user_input if letter in file_dict}
+user_dict = [file_dict[letter] for letter in user_input]
 print(user_dict)
